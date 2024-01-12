@@ -1,0 +1,540 @@
+html, body {
+    overflow-x: hidden;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.header {
+    background-color: #34495e;
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    z-index: 10;
+    text-align: center;
+    align-items: center;
+    color: #ecf0f1;
+}
+
+
+
+#sidebarMenu {
+    height: 100%;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    margin-top: 60px;
+    transform: translateX(-250px);
+    transition: transform 250ms ease-in-out;
+    background-color: #34495e;
+    z-index: 2;
+    }
+
+.sidebarMenuInner {
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid rgba(221, 30, 30, 0.1);
+}
+
+.sidebarMenuInner li {
+    list-style: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(188, 23, 23, 0.1);
+}
+
+.sidebarMenuInner li span {
+    display: block;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.50);
+}
+
+.sidebarMenuInner li a {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+input[type="checkbox"]:checked ~ #sidebarMenu {
+    transform: translateX(0);
+    
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+.sidebarIconToggle {
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    top: 22px;
+    left: 15px;
+    height: 22px;
+    width: 22px;
+}
+
+.spinner {
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.horizontal {
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+
+.diagonal.part-1 {
+    position: relative;
+    float: left;
+}
+
+.diagonal.part-2 {
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+
+input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+    opacity: 0;
+}
+
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+    transform: rotate(-135deg);
+    margin-top: -9px;
+}
+
+/* Estilos para la sección con video de fondo */
+.start {
+    height: 100vh; /* Ajusta según tus necesidades, esto hace que la sección ocupe toda la altura de la pantalla */
+    overflow: hidden;
+    padding-top: 20px;
+    position:relative;
+    z-index: 1;
+}
+
+.start img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:unset; 
+    z-index: -1; 
+}
+
+.start h2,
+.start .cta-btn {
+    position: absolute;
+    z-index: 1; 
+    color: #fff;
+}
+
+.start h2 {
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    text-align: center; 
+    font-size: 3em; 
+    
+}
+
+.start .cta-btn {
+    bottom: 20px; /* Ajusta según la posición vertical deseada del botón */
+    left: 50%;
+   /* Centra horizontalmente el botón */
+    transform: translateX(-50%); /* Centra completamente el botón */
+    padding: 10px 20px; /* Ajusta el relleno del botón según sea necesario */
+    text-decoration: none;
+    background-color: #2ecc71;
+    border-radius: 5px;
+}
+
+.cta-btn{
+    font-size: 2em;
+}
+/* Resto de tus estilos... */
+
+.space h2 {
+    text-align: center;
+    font-size: 2.5em;
+    padding: 1em;
+}
+
+
+.movie {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 3em;
+}
+
+.left {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+.left video {
+    width: 100%; /* Ajusta el ancho al 100% para que sea responsivo */
+    max-width: 60em; /* Establece un ancho máximo en pantalla completa de laptop */
+    height: 80vh; /* Mantiene la proporción del video */
+    object-fit: fill;
+}
+
+.right {
+    width: 100%;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.right p {
+    text-align: justify;
+    padding: 1em;
+    font-size: 1.5em;
+    word-break: break-all;
+}
+
+.right img {
+    width: 100%; /* Ajusta el ancho al 100% para que sea responsivo */
+    max-width: 350px; /* Establece un ancho máximo */
+    height: auto;
+}
+
+#servicios {
+    background-color: #ecf0f1;
+    padding: 50px 0;
+    text-align: center;
+    background: #2193b0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+}
+
+.til{
+    font-size: 2.5em;
+}
+.servicio {
+    display:inline-block;
+    margin: 20px;
+    position: relative;
+    cursor: pointer;
+   
+}
+.servicio p{
+    font-size: 2em;
+}
+.servicio img {
+    width: 350px;
+    transition: transform 0.5s ease; /* Transición suave de 0.5 segundos para la rotación */
+    }
+
+.rotate{
+    filter: grayscale(100%) brightness(0); /* Convierte la imagen en blanco y negro */
+}    
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(33, 147, 176, 0.8); /* Color de fondo con opacidad */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0; /* La capa está inicialmente oculta */
+    transition: opacity 0.5s ease; /* Transición suave de 0.5 segundos para la opacidad */
+    }
+
+    .overlay p {
+    color: white;
+    font-size: 1.3em;
+    text-align: justify;
+    margin: 1em;
+    word-break: break-all;
+    }
+
+
+#testimonios {
+    color: w;
+    padding: 50px 0;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #2193b0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+
+}
+
+.clientes{
+    color: white;
+    background: #2193b0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: solid 10px #1ca9cc07;
+}
+.clientes h3{
+    text-align: center;
+    font-size: 2.5em;
+
+}
+
+.testimonial {
+    width: 30em;
+    margin: 20px;
+    padding: 1em;
+}
+
+.testimonial img {
+    width: 170px;
+    border-radius: 50%;
+}
+
+.testimonial h3,
+.testimonial p{
+    font-size: 1.5em;
+    
+}
+
+
+.contact-section{
+    text-align: center;
+    background: #ECE9E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 100%;
+}
+
+   
+.contact-heading h2{
+    font-size: 3.5em;
+    color: black;
+}
+ 
+.container-contact {
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+  
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    align-items: center;
+    padding: 20px;
+    background: #8e9eab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    
+}
+
+.form-group textarea {
+    padding: 1.5em;
+    max-width: 100%;
+    width: 30em;
+    height: 30vh;
+    text-align: center;
+    background-color: white;
+    
+}
+  
+.form-group .input {
+    margin-bottom: 1em;
+    max-width: 100%;
+    width: 31em;
+    height: 3vh;
+    text-align: center;
+    padding: 1em 1em;
+   
+}
+  
+.btn-submit {
+    padding: 1em 1em;
+    margin: 1em;
+    border-radius: 20px;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+
+}
+
+.btn-submit:hover{
+    background-color: #2ecc71;
+    box-shadow: none;
+    color: azure;
+    
+}
+
+section.alerts {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    display: none;
+  }
+  
+  .alerts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.alert {
+    display: none;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.success {
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+.error {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+  .alert.success {
+    background-color: #ddffdd;
+  }
+  
+  .alert.error {
+    background-color: #ffdddd;
+    display: block;
+  }
+  
+  .alert p {
+    margin: 0;
+  }
+  
+  .alert i {
+    font-size: 20px;
+  }
+  
+  .alert.success i {
+    color: #008000;
+  }
+  
+  .alert.error i {
+    color: #ff0000;
+  }
+  
+.info {
+    width: 100%;
+    gap: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #2193b0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-size: 1em;
+    text-align: justify;
+    padding-bottom: 3em;
+    flex-wrap: wrap;
+    color: white;
+}
+
+
+.marca {
+    flex: 1; 
+    text-align: center;
+}
+
+.marca span {
+    padding-top: .5em;
+    color: gold;
+    font-size: 3em;
+    display: grid;
+    justify-items: center;
+}
+
+.enlaces,
+.horario,
+.contacto {
+    flex: 1;
+    text-align: center;
+    padding: 1em; 
+}
+
+
+.enlaces h1,
+.horario h1,
+.contacto h1,
+.enlaces h4,
+.horario h4,
+.contacto h4 {
+    margin: 0;
+    padding: .2em;
+    
+}
+
+
+.final{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 0 1em;
+    background: #34495e;
+    color: white;
+         
+}
+
+.der {
+    margin-left: auto; 
+    font-size: 2em;
+    cursor:pointer;
+    padding: 0 1em;
+    display: block;
+   
+   
+}
+
+
+.der a.facebook {
+    color: #1877f2;
+}
+
+.der a.instagram {
+    color: #e4405f;
+}
+
+.der a.tiktok {
+    color: #69c9d0; 
+}
+
+.der a.whatsapp {
+    color: #25d366;}
