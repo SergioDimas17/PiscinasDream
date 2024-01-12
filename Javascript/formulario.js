@@ -1,5 +1,6 @@
+// Importar la API Fetch (si es necesario)
+// import fetch from "fetch"; // Descomenta esta línea si tu entorno lo requiere
 
- import fetch from "fetch"; 
 // Obtener el formulario y los mensajes
 const formulario = document.getElementById("formulario");
 const successMessage = document.querySelector(".alert.success");
