@@ -9,3 +9,18 @@ function resetImage(element) {
     element.querySelector('.servicio img').classList.remove('rotate');
     element.querySelector('.overlay').style.opacity = 0; /* Oculta el overlay */
 }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Obtener el título y el botón
+    const title = document.getElementById("animatedTitle");
+    const button = document.querySelector(".bn39");
+
+    // Mostrar el título con animación
+    title.style.opacity = 1;
+
+    // Agregar clase de animación al botón
+    button.classList.add("buttonAnimation");
+});
+
+
