@@ -8,7 +8,7 @@ html, body {
 }
 
 /* Estilos para la barra de navegación */
-.header {
+.header { 
     background-color: #34495e;
     position: fixed;
     height: 70px;

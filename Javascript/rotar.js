@@ -9,7 +9,7 @@ function resetImage(element) {
     element.querySelector('.servicio img').classList.remove('rotate');
     element.querySelector('.overlay').style.opacity = 0; /* Oculta el overlay */
 }
-<<<<<<< HEAD
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -24,6 +24,3 @@ document.addEventListener("DOMContentLoaded", function () {
     button.classList.add("buttonAnimation");
 });
 
-
-=======
->>>>>>> 1048fee30c9cb3c486813f70c1e28641e57b2b68
